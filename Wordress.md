@@ -63,10 +63,10 @@ Wordpress เป็นโปรแกรมสำเร็จรูปที่�
 
 ### การ Install XAMPP
 
-Download XAMPP ได้ที่ https://www.apachefriends.org/index.html
+1. Download XAMPP ได้ที่ https://www.apachefriends.org/index.html
+2. ติดตั้ง XAMPP (บน windows 10)
 
-[![วิธีการติดตั้ง xampp บน windows 10](https://img.youtube.com/vi/-f8N4FEQWyY/0.jpg)](https://www.youtube.com/watch?v=-f8N4FEQWyY)
-
+   [![วิธีการติดตั้ง xampp บน windows 10](https://img.youtube.com/vi/-f8N4FEQWyY/0.jpg)](https://www.youtube.com/watch?v=-f8N4FEQWyY)
 
 ### การ Install Wordpress
 
