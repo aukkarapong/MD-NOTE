@@ -8,8 +8,8 @@
   - [ข้อดีของ Wordpress](#ข้อดีของ-wordpress)
   - [การติดตั้ง WordPress](#การติดตั้ง-wordpress)
     - [Requirements](#requirements)
-    - [การ install XAMPP](#การ-install-xampp)
-    - [การ install Wordpress](#การ-install-wordpress)
+    - [การ Install XAMPP](#การ-install-xampp)
+    - [การ Install Wordpress](#การ-install-wordpress)
 
 ## Wordpress คืออะไร?
 
@@ -61,6 +61,10 @@ Wordpress เป็นโปรแกรมสำเร็จรูปที่�
 
 และที่ขาดไม่ได้เลย Highlight ของงานคือ **Wordpress** ซึ่ง Download ได้จาก https://wordpress.org/download/
 
-### การ install XAMPP
+### การ Install XAMPP
 
-### การ install Wordpress
+Download XAMPP ได้ที่ https://www.apachefriends.org/index.html
+
+### การ Install Wordpress
+
+Download Wordpress ได้ที่ https://wordpress.org/download/
