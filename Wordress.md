@@ -21,6 +21,7 @@
     - [เปลี่ยนมาใช้ธีม Twenty Seventeen](#เปลี่ยนมาใช้ธีม-twenty-seventeen)
     - [ตั้งค่า General Settings](#ตั้งค่า-general-settings)
     - [Permalink Settings (ตั้งค่าลิงค์ถาวร)](#permalink-settings-ตั้งค่าลิงค์ถาวร)
+    - [การตั้งค่าความสายงามของ url](#การตั้งค่าความสายงามของ-url)
   - [ใช้งาน Page/Post](#ใช้งาน-pagepost)
     - [การสร้าง Page](#การสร้าง-page)
     - [การสร้าง post](#การสร้าง-post)
@@ -157,6 +158,21 @@ http://localhost/ชื่อ-folder-ที่วางไฟล์-wordpress/wp
 ### Permalink Settings (ตั้งค่าลิงค์ถาวร)
 
 ไปที่ `Settings` > `Permalink` แล้วให้ติ๊กที่ช่อง `Post name (หรือ ชื่อเรื่อง)`
+
+### การตั้งค่าความสายงามของ url
+
+```.htaccess
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /wp-01/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /wp-01/index.php [L]
+</IfModule>
+# END WordPress
+```
 
 ## ใช้งาน Page/Post
 
