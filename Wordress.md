@@ -21,11 +21,15 @@
     - [เปลี่ยนมาใช้ธีม Twenty Seventeen](#เปลี่ยนมาใช้ธีม-twenty-seventeen)
     - [ตั้งค่า General Settings](#ตั้งค่า-general-settings)
     - [Permalink Settings (ตั้งค่าลิงค์ถาวร)](#permalink-settings-ตั้งค่าลิงค์ถาวร)
-    - [การตั้งค่าความสายงามของ url](#การตั้งค่าความสายงามของ-url)
+    - [การตั้งค่าความสวยงามของ url](#การตั้งค่าความสวยงามของ-url)
   - [ใช้งาน Page/Post](#ใช้งาน-pagepost)
     - [การสร้าง Page](#การสร้าง-page)
     - [การสร้าง post](#การสร้าง-post)
   - [ตั้งค่าหน้า Home/Blog](#ตั้งค่าหน้า-homeblog)
+  - [การสร้างเมนู (Menu)](#การสร้างเมนู-menu)
+  - [Sidebar Footer และ Widget](#sidebar-footer-และ-widget)
+  - [การเพิ่ม plugin (ปลั๊กอิน)](#การเพิ่ม-plugin-ปลั๊กอิน)
+  - [การเปลี่ยนธีม (Theme)](#การเปลี่ยนธีม-theme)
 
 ## Wordpress คืออะไร?
 
@@ -159,7 +163,9 @@ http://localhost/ชื่อ-folder-ที่วางไฟล์-wordpress/wp
 
 ไปที่ `Settings` > `Permalink` แล้วให้ติ๊กที่ช่อง `Post name (หรือ ชื่อเรื่อง)`
 
-### การตั้งค่าความสายงามของ url
+### การตั้งค่าความสวยงามของ url
+
+สร้างไฟล์ .htaccess ไปวางไว้ใน folder
 
 ```.htaccess
 # BEGIN WordPress
@@ -190,12 +196,12 @@ RewriteRule . /wp-01/index.php [L]
 
 เช่น เว็บขายรองเสื้อผ้าแฟชั่นอาจจะแบ่งหมวดหมู่ ได้เป็นด้งนี้
 
-- เทรนแฟชั่น
-- แฟชั่นดารา
-- โซนเกาหลี
-- โซนญี่ปุ่น
-- เทคนิคการแต่งตัว
-- เคล็ดลับการ mix & match
+- เทรนแฟชั่น (fashion-trends)
+- แฟชั่นดารา (celebrity-fashion)
+- โซนเกาหลี (korean-fashion-zone)
+- โซนญี่ปุ่น (japanese-fashion-zone)
+- เทคนิคการแต่งตัว (dressing-technique)
+- เคล็ดลับการ mix & match (mix-and-match-tips)
 - ฯลฯ
 
 การสร้าง Category
@@ -206,6 +212,45 @@ RewriteRule . /wp-01/index.php [L]
 
     ไปที่ post > add new จากนั้นให้ใส่เนื้อหาของบทความลงไป
 
+การสร้างหน้า Blog เพื่อเอาไว้เข้าอ่าน post ต่าง ๆ
+
 ## ตั้งค่าหน้า Home/Blog
 
-ไปที่ settings > reading > ติ๊กที่ A static page > แล้วเลือกชื่อหน้าที่เราต้องการให้เป็นหน้า Homepage
+set home page
+
+    ไปที่ settings > reading > ติ๊กที่ A static page > แล้วเลือกชื่อหน้าที่เราต้องการให้เป็นหน้า Homepage
+
+set blog page
+
+    ไปที่ settings > reading > ติ๊กที่ A static page > แล้วเลือกชื่อหน้าที่เราต้องการให้เป็นหน้า Posts page
+
+## การสร้างเมนู (Menu)
+
+ไปที่ `Appearance` > `menu` > `ตั้งชื่อเรียกชุดเมนู` > คลิก `Create Menu`
+
+## Sidebar Footer และ Widget
+
+ปลั๊กอิน Classic Widgets
+
+## การเพิ่ม plugin (ปลั๊กอิน)
+
+ไปที่ `Plugins `> คลิก `add new`
+
+ทดสอบการเปลี่ยน font web ด้วย plugin `seed font`
+
+ไปที่ `Appearance` > `Fonts` แล้วคลิก `Enable`
+
+## การเปลี่ยนธีม (Theme)
+
+**`Theme`** คืออะไร???
+
+Theme คือ เครื่องมือที่ใช้สำหรับออกแบบ และจัดวาง layout หน้าตาเว็บไซต์ WordPress ของเราให้สวยงามในแบบที่เราต้องการ หากเราใช้งานธีมได้เก่งๆ เราจะสามารถออกแบบหน้าเว็บของเราอย่างไรก็ได้ ทุกไอเดีย หรือออกแบบเว็บเลียนแบบหน้าตาของเว็บที่เราชอบก็ได้
+
+Theme มีอยู่ 2 ประเภท คือ
+
+- ฟรี
+- เสียตังค์ซื้อ (หรือเรียกกันว่า Premium Theme)
+  - https://themeforest.net/
+  - https://seedthemes.com/
+
+ตัวอย่าง theme ฟรี พร้อม demo content https://wpastra.com/pricing/
