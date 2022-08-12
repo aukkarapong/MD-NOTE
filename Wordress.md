@@ -32,6 +32,11 @@
   - [การเปลี่ยนธีม (Theme)](#การเปลี่ยนธีม-theme)
   - [Woocommerce](#woocommerce)
 
+https://codex.wordpress.org/Database_Description
+
+[![วิธีการติดตั้ง xampp บน windows 10](https://codex.wordpress.org/images/2/25/WP4.4.2-ERD.png)
+
+
 ## Wordpress คืออะไร?
 
 Wordpress เป็นโปรแกรมสำเร็จรูปที่ใช้สร้างและจัดการเนื้อหาเว็บไซต์ประเภท Contents Management System หรือเรียกย่อๆ ว่า "CMS" ซึ่งเขียนด้วยภาษา PHP และใช้ระบบจัดการฐานข้อมูล MySQL โดยมีส่วนประกอบหลักๆ คือ
