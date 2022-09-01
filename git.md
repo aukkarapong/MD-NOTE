@@ -95,11 +95,47 @@ Distributed Version Control System ที่สำคัญตัวหนึ่
 
 ## 3. หลักการพื้นฐานของ Git
 
+Git เป็น Distributed Version Control System ตัวหนึ่งที่ได้รับความนิยมอย่างมาก เริ่มพัฒนาโดย Linus Torvalds ด้วยภาษา C, Shell Script, Perl, Tcl และ Python เริ่มใช้ครั้งแรกในปี 2005 และเปิดให้ใช้งานแบบ Open Source
+
 ### 3.1 Git vs other VCS
+
+Git เป็น Distributed Version Control System ซึ่งต้องมีการ Copy Version ของ Source Code มาเก็บไว้ที่ Local host ก่อน ทำให้ผู้ใช้สามารถแก้ไข Project ได้ทุกที่แบบ Offline และ Check-In Source Code บน Local Repository โดยไม่ต้องติดต่อกับ Repository บน Server (Remote Repository) พอแก้ไขเสร็จแล้วก็ค่อยสั่ง Sync ข้อมูล (Pull/Merge/Push) ทีหลัง
+
+ดังนั้นเมื่อเราสามารถทำทุกอย่างบน Local Host ได้ มันจึงเร็วกว่า SVN ที่เป็น Centralized Version Control System อย่างมาก
+
+นอกจากนี้ Git ยังมีความแตกต่างกับ Version Control System อื่นๆ ในเรื่องของการจัดเก็บข้อมูล Version โดย Version Control System ทั่วไปจะเก็บเป็น Link ของความเปลี่ยนแปลง หรือส่วนต่างระหว่าง Version ดังภาพด้านล่าง
+
+![Version Control](https://blog.pjjop.org/content/images/2019/12/image-3.png)
+
+แทนที่จะเก็บส่วนต่างระหว่าง Version, Git เก็บ Version ของ Source Code เป็น Snapshot และอ้างถึง File ที่ไม่มีการเปลี่ยนแปลงใน Version ก่อนหน้า ทุกครั้งที่มีการ Check-In มันจะถ่ายรูปไฟล์ของเราว่ามีหน้าตาเป็นอย่างไร (Snapshot) โดย Git มองข้อมูลที่จัดเก็บเป็นเหมือน File System เล็กๆ หนึ่ง ดังภาพด้านล่าง
+
+![Git](https://blog.pjjop.org/content/images/2019/12/image-4.png)
 
 ### 3.2 Git Work Flow
 
+Git แบ่งสถานะของไฟล์ที่มันจะติดตาม (Tracked) เป็น 3 สถานะ คือ Modified, Staged และ Committed
+
+สถานะ **Modified** หมายถึงเราได้แก้ไขไฟล์ไปแล้ว แต่ยังไม่เริ่มกระบวนการจัดเก็บลง Repository
+
+สถานะ **Staged** หมายถึงเราได้ทำเครื่องหมาย File ที่ได้ถูกแก้ไข เพื่อจะบันทึกใน Version หน้า
+
+สถานะ **Committed** หมายถึงข้อมูลถูกบันทึกอย่างปลอดภัยใน Repository บน Local Host
+
+ซึ่งจะแสดงการเปลี่ยนสถานะของไฟล์ในส่วนต่างๆ ดังภาพด้านล่าง
+
+![Git](https://blog.pjjop.org/content/images/2019/12/image-5.png)
+
+จากภาพ Workflow ของ Git มีกระบวนการดังนี้
+
+เมื่อมีการเรียกคืน Source Code ใน Version หนึ่งๆ จาก Git Repository (Check Out), Source Code เหล่านั้นจะถูกนำมาวางที่ Working Directory
+
+- เราจะแก้ไขไฟล์ใน Working Directory (ไฟล์ที่แก้ไขจะอยู่ในสถานะ Modified)
+- รวบรวมไฟล์ที่ถูกแก้ไขลงใน Staging area เพื่อจะ Commit ใน Version ถัดไป (ไฟล์ที่ถูกรวบรวมจะอยู่ในสถานะ Staged)
+- Commit เพื่อนำไฟล์จาก Staging Area ไปจัดเก็บอย่างถาวรใน Local Repository (ไฟล์ที่ถูกบันทึกลง Repository อยู่ในสถานะ Commited)
+
 ## 4. เริ่มต้นใช้งาน Git (Gitlab)
+
+https://gitlab.com/
 
 ### 4.1 Register & Sign in Gitlab
 
@@ -108,6 +144,26 @@ Distributed Version Control System ที่สำคัญตัวหนึ่
 ### 4.3 การเชื่อมโยงกับ Remote Repository
 
 ### 4.4 การติดตั้ง Git Client และการเรียกใช้งาน
+
+https://git-scm.com/downloads
+
+ใช้งาน Git แบบ Unix Command Line Based เหมือนกับในบทความนี้ ผมแนะนำว่าให้ท่านติดตั้ง Windows Subsystem for Linux (WSL) และ Ubuntu Distribution จาก Microsoft Store แทน โดยทำตามขั้นตอนต่อไปนี้
+
+- เปิด PowerShell แบบ Administrator แล้วติดตั้ง WSL ด้วยคำสั่งต่อไปนี้
+
+```sh
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+
+- Update WSL เป็น Version 2
+
+```sh
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+wsl --set-default-version 2
+```
+
+ติดตั้ง Ubuntu Distribution (Ubuntu 18.04 LTS) จาก Microsoft Store (https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
 
 ### 4.5 การ Config Git ให้พร้อมใช้งาน
 
