@@ -147,24 +147,6 @@ https://gitlab.com/
 
 https://git-scm.com/downloads
 
-ใช้งาน Git แบบ Unix Command Line Based เหมือนกับในบทความนี้ ผมแนะนำว่าให้ท่านติดตั้ง Windows Subsystem for Linux (WSL) และ Ubuntu Distribution จาก Microsoft Store แทน โดยทำตามขั้นตอนต่อไปนี้
-
-- เปิด PowerShell แบบ Administrator แล้วติดตั้ง WSL ด้วยคำสั่งต่อไปนี้
-
-```sh
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-```
-
-- Update WSL เป็น Version 2
-
-```sh
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-
-wsl --set-default-version 2
-```
-
-- ติดตั้ง Ubuntu Distribution (Ubuntu 18.04 LTS) จาก Microsoft Store (https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
-
 - ทดสอบ git command
 
 ```sh
@@ -177,7 +159,9 @@ git version
 git config --global user.name "Aukkarapong.W"
 git config --global user.email "zixboo@hotmail.com"
 
-git init
+cd /mnt/c
+
+git init --initial-branch=master
 
 git status
 
@@ -206,9 +190,11 @@ git remote -v
 git remote add origin https://gitlab.com/zixboo/lern-git.git
 # git push <remote_name> <branch_name> // ตัวอย่าง git push origin master
 
-git pull
+# git config --global --add safe.directory '*'
 
-git push
+git pull origin master
+
+git push origin master
 
 ```
 
@@ -239,6 +225,8 @@ git push
 - Fork
 
 ### 7.1 การติดตั้ง Sourcetree
+
+https://www.sourcetreeapp.com/
 
 ### 7.2 Create Repository
 
