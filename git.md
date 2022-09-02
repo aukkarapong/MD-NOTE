@@ -163,13 +163,54 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 wsl --set-default-version 2
 ```
 
-ติดตั้ง Ubuntu Distribution (Ubuntu 18.04 LTS) จาก Microsoft Store (https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
+- ติดตั้ง Ubuntu Distribution (Ubuntu 18.04 LTS) จาก Microsoft Store (https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
+
+- ทดสอบ git command
+
+```sh
+git version
+```
 
 ### 4.5 การ Config Git ให้พร้อมใช้งาน
 
-### 4.6 การ Check-in Source Code
+```sh
+git config --global user.name "Aukkarapong.W"
+git config --global user.email "zixboo@hotmail.com"
 
-### 4.7 การ Check-in Local Repository
+git init
+
+git status
+
+git add file-a.html
+# git add <file_name> // ระบุไฟล์ เช่น git add index.html about.html
+# git add . // ทุกไฟล์ที่อยู่ภายใต้ Directory ปัจจุบัน
+# git add --all หรือ git add -A // ทุกไฟล์ใน Project
+# git add *.html // หลายไฟล์ระบุนามสกุล
+
+git commit -m "add file-a.html"
+# git commit -am "ข้อความอธิบายการเปลี่ยนแปลง" // -am = รวมทั้ง add และ commit ในคราวเดียวกันก็ใช้
+
+git log
+# git log // คำสั่งใช้ดูประวัติการ commit ต่างๆ ของRepo โดยจะแสดง เลขcommit, commit message, ชื่อผู้เขียน, email, และเวลาที่ commit นั้นๆ
+# git log --oneline // แสดงแต่ละlog เหลือบรรทัดเดียว
+# git log --pretty=oneline // แสดงแต่ละlog เหลือบรรทัดเดียว แต่แสดง commit เต็มไม่ซ่อน
+# git log --graph // แสดงเป็นเส้น Branch ให้ดูง่ายขึ้น
+# git log --oneline --graph // ถ้าใช้แบบนี้จะดูง่ายขึ้นมาก
+
+
+
+# git config --list // แสดงเฉพาะ Repository นี้
+# git config --global --list // แสดงทั้งหมด
+
+git remote -v
+git remote add origin https://gitlab.com/zixboo/lern-git.git
+# git push <remote_name> <branch_name> // ตัวอย่าง git push origin master
+
+git pull
+
+git push
+
+```
 
 ### 4.8 การ Sync History กับ Gitlab Server
 
