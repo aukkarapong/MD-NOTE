@@ -210,30 +210,3 @@ git push origin master
 ![2](git-cheat-sheet/git-cheat-sheet-2.png)
 ![3](git-cheat-sheet/git-cheat-sheet-3.png)
 ![4](git-cheat-sheet/git-cheat-sheet-4.png)
-
-## 7. Git GUI Clients
-
-- GitHub Desktop
-- GitKraken
-- Sourcetree
-- Tortoise Git
-- SmartGit
-- GitForce
-- Git Cola
-- Aurees
-- Magit
-- Fork
-
-### 7.1 การติดตั้ง Sourcetree
-
-https://www.sourcetreeapp.com/
-
-### 7.2 Create Repository
-
-### 7.3 Clone Project
-
-### 7.4 pull/push/staged/unstaged
-
-### 7.5 branch
-
-### 7.5 merge
