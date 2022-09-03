@@ -196,6 +196,8 @@ git pull origin master
 
 git push origin master
 
+git clone <git url>
+
 ```
 
 ### 4.8 การ Sync History กับ Gitlab Server
