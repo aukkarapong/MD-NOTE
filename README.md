@@ -60,3 +60,21 @@ https://github.com/ionic-team/ionic-storage
 ```sh
 npm install @ionic/storage-angular
 ```
+
+## src/app/app.module.ts
+```ts
+import { IonicStorageModule } from '@ionic/storage-angular'
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    IonicStorageModule.forRoot()
+  ],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
