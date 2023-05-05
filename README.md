@@ -78,3 +78,17 @@ import { IonicStorageModule } from '@ionic/storage-angular'
 })
 export class AppModule {}
 ```
+
+## แก้ package.json
+- ปรับ version "@angular***/***":"16.0.0" ไปเป็น "@angular/***":"15.0.0"
+- "rxjs": "~7.8.0" ไปเป็น "rxjs": "~7.5.0"
+- "zone.js": "~0.13.0" ไปเป็น "zone.js": "~0.11.4"
+- "typescript": "~5.0.2" ไปเป็น "typescript": "~4.8.4"
+
+## ลบไฟล์ package-lock.json
+
+## ลบ folder node_module
+
+## ลง package ใหม่ด้วยคำสั่ง npm i หรือ npm install
+
+
