@@ -51,3 +51,7 @@ ionic start ionic-login-demo blank
   </div>
 </ion-content>
 ```
+
+## ใช้งาน data storage ใน ionic 6
+https://ionicframework.com/docs/v6/angular/storage
+https://github.com/ionic-team/ionic-storage
