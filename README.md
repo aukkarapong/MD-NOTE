@@ -28,7 +28,7 @@ ionic start ionic-login-demo blank
         <ion-col>
           <ion-item>
             <ion-label position="floating">Email</ion-label>
-            <ion-input placeholder="กรอกอีเมล์" [(ngModel)]="loginEmail"></ion-input>
+            <ion-input placeholder="กรอกอีเมล์"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -36,13 +36,13 @@ ionic start ionic-login-demo blank
         <ion-col>
           <ion-item>
             <ion-label position="floating">Password</ion-label>
-            <ion-input placeholder="กรอกรหัสผ่าน" [(ngModel)]="loginPassword" type="password"></ion-input>
+            <ion-input placeholder="กรอกรหัสผ่าน" type="password"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button expand="block" fill="outline" (click)="onClickLoginButton()">
+          <ion-button expand="block" fill="outline">
             Login (เข้าสู่ระบบ)
           </ion-button>
         </ion-col>
