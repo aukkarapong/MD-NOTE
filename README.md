@@ -55,3 +55,8 @@ ionic start ionic-login-demo blank
 ## ใช้งาน data storage ใน ionic 6
 https://ionicframework.com/docs/v6/angular/storage
 https://github.com/ionic-team/ionic-storage
+
+## install plugin
+```sh
+npm install @ionic/storage-angular
+```
